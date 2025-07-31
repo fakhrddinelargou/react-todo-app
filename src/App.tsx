@@ -71,7 +71,7 @@ queryClient.invalidateQueries({queryKey:["tasks"]})
   return (
     <div className="w-screen relative h-auto min-h-[100vh] z-0 bg-blue-50 flex items-center justify-center b">
       <div className="w-full h-[40vh] z-[-1] bg-blue-300 absolute top-0 left-0"></div>
-      <div className="bg-white w-[40%] min-h-[60vh] rounded-[.5rem] shadow-2xs flex flex-col  py-4 px-5 ">
+      <div className="card   bg-white w-[40%] min-h-[60vh] rounded-[.5rem] shadow-2xs flex flex-col  py-4 px-5 ">
         <h2 className="text-4xl mb-5 font-extrabold text-blue-950">
           T<span className="text-blue-300">o</span>d
           <span className="text-blue-300">o</span>.
