@@ -53,7 +53,7 @@ const queryClient = useQueryClient()
 
 
   const postTask = useMutation({
-    mutationFn : (newTask : FieldData ) => fetch("http://localhost:3000/tasks" , {
+    mutationFn : (newTask : FieldData ) => fetch("https://688bce19cd9d22dda5cb5584.mockapi.io/api/v1/tasks" , {
       method : "POST",
       body : JSON.stringify(newTask),
 headers:{

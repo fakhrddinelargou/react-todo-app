@@ -15,12 +15,12 @@ const queryClient = useQueryClient()
 
     const {data} = useQuery<FieldData[]>({
         queryKey : ["tasks"],
-        queryFn : () => fetch("http://localhost:3000/tasks").then((res) => res.json()),
+        queryFn : () => fetch("https://688bce19cd9d22dda5cb5584.mockapi.io/api/v1/tasks").then((res) => res.json()),
     })
 
 
     const taskComplated = useMutation({
-        mutationFn : (item : FieldData) => fetch (`http://localhost:3000/tasks/${item.id}`, {
+        mutationFn : (item : FieldData) => fetch (`https://688bce19cd9d22dda5cb5584.mockapi.io/api/v1/tasks/${item.id}`, {
             method : "PUT",
             body:JSON.stringify({
             completed : !item.completed,
@@ -37,7 +37,7 @@ queryClient.invalidateQueries({queryKey:["tasks"]})
 
 
         const deleteTask = useMutation({
-        mutationFn : (item : FieldData) => fetch (`http://localhost:3000/tasks/${item.id}`, {
+        mutationFn : (item : FieldData) => fetch (`https://688bce19cd9d22dda5cb5584.mockapi.io/api/v1/tasks/${item.id}`, {
             method : "DELETE",
           
             headers:{
